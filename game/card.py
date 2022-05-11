@@ -32,4 +32,5 @@ class Card:
         self.card_to_guess = random.randint(1, 13)
         if self.current_card < self.card_to_guess:
             self.higher_lower = "h"
-        else: self.higher_lower = "l"
+        else:
+            self.higher_lower = "l"
