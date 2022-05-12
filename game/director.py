@@ -87,10 +87,15 @@ class Director:
         print()
 
     def get_play_again(self):
-        """Ask the user if they want to play again.
+        """Ask the user if they want to play again if the score is 
+        more than zero, if not go aout of the program.
 
         Args:
             self (Director): An instance of Director.
         """
-        play_again = input("Play again? [y/n] ")
-        self.is_playing = (play_again == "y")
+        if self.points > 0:
+            play_again = input("Play again? [y/n] ")
+            self.is_playing = (play_again == "y")
+        else:
+            self.is_playing = False
+            print("You lost all of your points, good luck next time!")
